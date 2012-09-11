@@ -89,7 +89,7 @@
 
   , slide: function (type, next) {
       var $active = this.$element.find('.item.active')
-        , $next = next || $active[type]()
+        , $next = next || $active[type+"All"](".item").first()
         , isCycling = this.interval
         , direction = type == 'next' ? 'left' : 'right'
         , fallback  = type == 'next' ? 'first' : 'last'
